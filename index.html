@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Projekt na Niemiecki - Interaktywne Fiszki</title>
+    <title>Projekt na Niemiecki</title>
     
     <script src="https://cdn.tailwindcss.com"></script>
 
@@ -25,13 +25,11 @@
             from { opacity: 0; transform: translateY(-10px); }
             to { opacity: 1; transform: translateY(0); }
         }
-
-        /* NOWE STYLE DLA ANIMACJI KART */
         .flip-card {
             background-color: transparent;
             width: 150px;
             height: 50px;
-            perspective: 1000px; /* Efekt 3D */
+            perspective: 1000px;
             cursor: pointer;
         }
         .flip-card-inner {
@@ -42,9 +40,8 @@
             transition: transform 0.6s;
             transform-style: preserve-3d;
             box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
-            border-radius: 0.5rem; /* 8px */
+            border-radius: 0.5rem;
         }
-        /* Klasa dodawana przez JS do obracania */
         .flip-card-inner.is-flipped {
             transform: rotateY(180deg);
         }
@@ -52,22 +49,29 @@
             position: absolute;
             width: 100%;
             height: 100%;
-            -webkit-backface-visibility: hidden; /* Safari */
+            -webkit-backface-visibility: hidden;
             backface-visibility: hidden;
             display: flex;
             justify-content: center;
             align-items: center;
-            border-radius: 0.5rem; /* 8px */
+            border-radius: 0.5rem;
             font-weight: 600;
         }
         .flip-card-front {
-            background-color: #374151; /* bg-gray-700 */
-            color: #a5b4fc; /* text-indigo-300 */
+            background-color: #374151;
+            color: #a5b4fc;
         }
         .flip-card-back {
-            background-color: #4338ca; /* bg-indigo-700 */
+            background-color: #4338ca;
             color: white;
             transform: rotateY(180deg);
+        }
+        /* Styl dla tekstu piosenki */
+        .lyrics-box pre {
+            white-space: pre-wrap; /* Zawijanie wierszy */
+            font-family: 'Poppins', sans-serif;
+            font-size: 0.95rem;
+            line-height: 1.6;
         }
     </style>
 </head>
@@ -76,7 +80,7 @@
     <header class="bg-gray-800/50 backdrop-blur-sm sticky top-0 z-50 shadow-lg">
         <div class="container mx-auto px-6 py-4 flex justify-between items-center">
             <h1 class="text-2xl md:text-3xl font-bold text-white tracking-wider">
-                Projekt z Piosenki
+                
             </h1>
             <a href="#zadania" class="bg-indigo-600 hover:bg-indigo-700 text-white font-bold py-2 px-4 rounded-full transition duration-300 ease-in-out transform hover:scale-105">
                 Przejdź do zadań
@@ -84,11 +88,80 @@
         </div>
     </header>
 
-    <section class="container mx-auto px-6 py-12 text-center">
-        <h2 class="text-4xl font-bold text-white mb-4">Uzupełnij zdania słownictwem z piosenki</h2>
-        <p class="text-lg text-indigo-300 mb-8">Xavier Naidoo - Dieser Weg</p>
-        
-        <div class="bg-gray-800 p-6 rounded-2xl max-w-2xl mx-auto shadow-2xl border border-gray-700">
+    <section class="container mx-auto px-6 py-12">
+        <div class="text-center">
+            <h2 class="text-4xl font-bold text-white mb-4">Analiza piosenki "Dieser Weg"</h2>
+            <p class="text-lg text-indigo-300">Xavier Naidoo</p>
+        </div>
+
+        <div class="mt-12 grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl mx-auto">
+            <div class="lyrics-box bg-gray-800 p-6 rounded-2xl border border-gray-700">
+                <h3 class="text-2xl font-semibold mb-4 text-white">Tekst Oryginalny</h3>
+                <pre class="text-gray-300">Also ging ich diese Straße lang,
+und die Straße führte zu mir.
+Das Lied, das Du am letzten Abend sangst,
+spielte nun in mir.
+Noch ein paar Schritte und dann war ich da
+mit dem Schlüssel zu dieser Tür
+
+Dieser Weg, wird kein leichter sein,
+dieser Weg, wird steinig und schwer
+Nicht mit vielen wirst du dir einig sein,
+doch dieses Leben bietet soviel mehr.
+
+Es war nur ein kleiner Augenblick,
+einen Moment war ich nicht da.
+Danach ging ich einen kleinen Schritt
+und dann wurde es mir klar.
+
+Dieser Weg, wird kein leichter sein,
+dieser Weg, wird steinig und schwer
+Nicht mit vielen wirst du dir einig sein,
+doch dieses Leben bietet soviel mehr.
+
+Manche treten Dich,
+manche lieben dich,
+manche geben sich,
+für dich auf
+Manche segnen Dich,
+setz dein Segel nicht,
+wenn der Wind, das Meer aufbraust.</pre>
+            </div>
+            <div class="lyrics-box bg-gray-800 p-6 rounded-2xl border border-gray-700">
+                <h3 class="text-2xl font-semibold mb-4 text-white">Tłumaczenie</h3>
+                <pre class="text-gray-300">Więc szedłem tą drogą,
+a droga prowadziła do mnie.
+Piosenka, którą zaśpiewałeś ostatniego wieczoru,
+teraz grała we mnie.
+Jeszcze kilka kroków – i byłem na miejscu,
+z kluczem do tych drzwi.
+
+Ta droga nie będzie łatwa,
+ta droga będzie kamienista i trudna.
+Z niewieloma znajdziesz wspólny język,
+ale to życie oferuje o wiele więcej.
+
+To była tylko krótka chwila,
+na moment mnie nie było.
+Potem zrobiłem mały krok –
+i wtedy to zrozumiałem.
+
+Ta droga nie będzie łatwa,
+ta droga będzie kamienista i trudna.
+Z niewieloma znajdziesz wspólny język,
+ale to życie oferuje o wiele więcej.
+
+Niektórzy cię podepczą,
+niektórzy będą cię kochać,
+niektórzy oddadzą się
+całkowicie dla ciebie.
+Niektórzy cię pobłogosławią –
+nie stawiaj żagli,
+gdy wiatr wzburza morze.</pre>
+            </div>
+        </div>
+
+        <div class="mt-12 bg-gray-800 p-6 rounded-2xl max-w-2xl mx-auto shadow-2xl border border-gray-700 text-center">
             <h3 class="text-2xl font-semibold mb-4 text-white">O czym jest ta piosenka?</h3>
             <p id="song-description-text" class="text-gray-300 text-left min-h-[100px]">Dieses Lied ist über den Lebensweg. Es sagt, dass das Leben nicht leicht ist. Es ist oft schwer, mit vielen Steinen und Hindernissen.</p>
             <button id="translate-btn" class="mt-4 bg-teal-600 hover:bg-teal-700 text-white font-bold py-2 px-4 rounded-lg transition duration-300 ease-in-out transform hover:scale-105">
@@ -101,7 +174,6 @@
         <h2 class="text-3xl font-bold text-white mb-6">Bank Słów (Wortschatz)</h2>
         <p class="text-gray-400 mb-8 max-w-3xl mx-auto">Kliknij na słówko, aby zobaczyć jego tłumaczenie. Następnie użyj tych słów, aby uzupełnić luki w zadaniach.</p>
         <div class="flex flex-wrap justify-center items-center gap-4 max-w-4xl mx-auto">
-            
             <div class="flip-card"><div class="flip-card-inner"><div class="flip-card-front">führen</div><div class="flip-card-back">prowadzić</div></div></div>
             <div class="flip-card"><div class="flip-card-inner"><div class="flip-card-front">steinig</div><div class="flip-card-back">kamienisty</div></div></div>
             <div class="flip-card"><div class="flip-card-inner"><div class="flip-card-front">schwer</div><div class="flip-card-back">ciężki, trudny</div></div></div>
@@ -112,13 +184,11 @@
             <div class="flip-card"><div class="flip-card-inner"><div class="flip-card-front">aufgeben</div><div class="flip-card-back">poddawać się</div></div></div>
             <div class="flip-card"><div class="flip-card-inner"><div class="flip-card-front">segnen</div><div class="flip-card-back">błogosławić</div></div></div>
             <div class="flip-card"><div class="flip-card-inner"><div class="flip-card-front">aufbrausen</div><div class="flip-card-back">burzyć się</div></div></div>
-
         </div>
     </section>
 
     <main id="zadania" class="container mx-auto px-6 py-8">
         <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-            
             <div class="word-card bg-gray-800 rounded-2xl shadow-2xl p-6 transition duration-300 hover:shadow-indigo-500/40">
                 <h3 class="text-2xl font-bold text-indigo-400 mb-4">Zadanie 1</h3>
                 <label for="task1" class="block mb-2 font-semibold text-gray-300">Uzupełnij zdanie:</label>
@@ -129,7 +199,6 @@
                 </div>
                 <p class="feedback mt-2 h-6 text-sm font-semibold"></p>
             </div>
-
             <div class="word-card bg-gray-800 rounded-2xl shadow-2xl p-6 transition duration-300 hover:shadow-indigo-500/40">
                 <h3 class="text-2xl font-bold text-indigo-400 mb-4">Zadanie 2</h3>
                 <label for="task2" class="block mb-2 font-semibold text-gray-300">Uzupełnij zdanie:</label>
@@ -140,125 +209,37 @@
                 </div>
                 <p class="feedback mt-2 h-6 text-sm font-semibold"></p>
             </div>
-            
-            <div class="word-card bg-gray-800 rounded-2xl shadow-2xl p-6 transition duration-300 hover:shadow-indigo-500/40">
-                <h3 class="text-2xl font-bold text-indigo-400 mb-4">Zadanie 3</h3>
-                <label for="task3" class="block mb-2 font-semibold text-gray-300">Uzupełnij zdanie:</label>
-                <p class="task-sentence my-2 text-gray-300 text-lg">Die Prüfung in Mathe war sehr ______.</p>
-                <div class="flex flex-col sm:flex-row gap-2">
-                    <input id="task3" type="text" class="flex-grow bg-gray-700 border-2 border-gray-600 rounded-lg py-2 px-4 text-white focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500 transition" placeholder="Wpisz słówko...">
-                    <button class="check-btn bg-indigo-600 hover:bg-indigo-700 text-white font-bold py-2 px-4 rounded-lg transition duration-300 ease-in-out">Sprawdź</button>
-                </div>
-                <p class="feedback mt-2 h-6 text-sm font-semibold"></p>
-            </div>
-
-            <div class="word-card bg-gray-800 rounded-2xl shadow-2xl p-6 transition duration-300 hover:shadow-indigo-500/40">
-                <h3 class="text-2xl font-bold text-indigo-400 mb-4">Zadanie 4</h3>
-                <label for="task4" class="block mb-2 font-semibold text-gray-300">Uzupełnij zdanie:</label>
-                <p class="task-sentence my-2 text-gray-300 text-lg">Ich hoffe, wir werden uns schnell ______ sein.</p>
-                <div class="flex flex-col sm:flex-row gap-2">
-                    <input id="task4" type="text" class="flex-grow bg-gray-700 border-2 border-gray-600 rounded-lg py-2 px-4 text-white focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500 transition" placeholder="Wpisz słówko...">
-                    <button class="check-btn bg-indigo-600 hover:bg-indigo-700 text-white font-bold py-2 px-4 rounded-lg transition duration-300 ease-in-out">Sprawdź</button>
-                </div>
-                <p class="feedback mt-2 h-6 text-sm font-semibold"></p>
-            </div>
-
-            <div class="word-card bg-gray-800 rounded-2xl shadow-2xl p-6 transition duration-300 hover:shadow-indigo-500/40">
-                <h3 class="text-2xl font-bold text-indigo-400 mb-4">Zadanie 5</h3>
-                <label for="task5" class="block mb-2 font-semibold text-gray-300">Uzupełnij zdanie:</label>
-                <p class="task-sentence my-2 text-gray-300 text-lg">Was kannst du mir _______?</p>
-                <div class="flex flex-col sm:flex-row gap-2">
-                    <input id="task5" type="text" class="flex-grow bg-gray-700 border-2 border-gray-600 rounded-lg py-2 px-4 text-white focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500 transition" placeholder="Wpisz słówko...">
-                    <button class="check-btn bg-indigo-600 hover:bg-indigo-700 text-white font-bold py-2 px-4 rounded-lg transition duration-300 ease-in-out">Sprawdź</button>
-                </div>
-                <p class="feedback mt-2 h-6 text-sm font-semibold"></p>
-            </div>
-
-            <div class="word-card bg-gray-800 rounded-2xl shadow-2xl p-6 transition duration-300 hover:shadow-indigo-500/40">
-                <h3 class="text-2xl font-bold text-indigo-400 mb-4">Zadanie 6</h3>
-                <label for="task6" class="block mb-2 font-semibold text-gray-300">Uzupełnij zdanie:</label>
-                <p class="task-sentence my-2 text-gray-300 text-lg">Das war ein besonderer _______ in meinem Leben.</p>
-                <div class="flex flex-col sm:flex-row gap-2">
-                    <input id="task6" type="text" class="flex-grow bg-gray-700 border-2 border-gray-600 rounded-lg py-2 px-4 text-white focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500 transition" placeholder="Wpisz słówko...">
-                    <button class="check-btn bg-indigo-600 hover:bg-indigo-700 text-white font-bold py-2 px-4 rounded-lg transition duration-300 ease-in-out">Sprawdź</button>
-                </div>
-                <p class="feedback mt-2 h-6 text-sm font-semibold"></p>
-            </div>
-
-            <div class="word-card bg-gray-800 rounded-2xl shadow-2xl p-6 transition duration-300 hover:shadow-indigo-500/40">
-                <h3 class="text-2xl font-bold text-indigo-400 mb-4">Zadanie 7</h3>
-                <label for="task7" class="block mb-2 font-semibold text-gray-300">Uzupełnij zdanie:</label>
-                <p class="task-sentence my-2 text-gray-300 text-lg">Mach einen _______ nach vorne.</p>
-                <div class="flex flex-col sm:flex-row gap-2">
-                    <input id="task7" type="text" class="flex-grow bg-gray-700 border-2 border-gray-600 rounded-lg py-2 px-4 text-white focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500 transition" placeholder="Wpisz słówko...">
-                    <button class="check-btn bg-indigo-600 hover:bg-indigo-700 text-white font-bold py-2 px-4 rounded-lg transition duration-300 ease-in-out">Sprawdź</button>
-                </div>
-                <p class="feedback mt-2 h-6 text-sm font-semibold"></p>
-            </div>
-            
-            <div class="word-card bg-gray-800 rounded-2xl shadow-2xl p-6 transition duration-300 hover:shadow-indigo-500/40">
-                <h3 class="text-2xl font-bold text-indigo-400 mb-4">Zadanie 8</h3>
-                <label for="task8" class="block mb-2 font-semibold text-gray-300">Uzupełnij zdanie:</label>
-                <p class="task-sentence my-2 text-gray-300 text-lg">Auch wenn es schwer ist, darfst du nicht ______.</p>
-                <div class="flex flex-col sm:flex-row gap-2">
-                    <input id="task8" type="text" class="flex-grow bg-gray-700 border-2 border-gray-600 rounded-lg py-2 px-4 text-white focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500 transition" placeholder="Wpisz słówko...">
-                    <button class="check-btn bg-indigo-600 hover:bg-indigo-700 text-white font-bold py-2 px-4 rounded-lg transition duration-300 ease-in-out">Sprawdź</button>
-                </div>
-                <p class="feedback mt-2 h-6 text-sm font-semibold"></p>
-            </div>
-
-            <div class="word-card bg-gray-800 rounded-2xl shadow-2xl p-6 transition duration-300 hover:shadow-indigo-500/40">
-                <h3 class="text-2xl font-bold text-indigo-400 mb-4">Zadanie 9</h3>
-                <label for="task9" class="block mb-2 font-semibold text-gray-300">Uzupełnij zdanie:</label>
-                <p class="task-sentence my-2 text-gray-300 text-lg">Meine Oma wird dich ______.</p>
-                <div class="flex flex-col sm:flex-row gap-2">
-                    <input id="task9" type="text" class="flex-grow bg-gray-700 border-2 border-gray-600 rounded-lg py-2 px-4 text-white focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500 transition" placeholder="Wpisz słówko...">
-                    <button class="check-btn bg-indigo-600 hover:bg-indigo-700 text-white font-bold py-2 px-4 rounded-lg transition duration-300 ease-in-out">Sprawdź</button>
-                </div>
-                <p class="feedback mt-2 h-6 text-sm font-semibold"></p>
-            </div>
-
-            <div class="word-card bg-gray-800 rounded-2xl shadow-2xl p-6 transition duration-300 hover:shadow-indigo-500/40">
-                <h3 class="text-2xl font-bold text-indigo-400 mb-4">Zadanie 10</h3>
-                <label for="task10" class="block mb-2 font-semibold text-gray-300">Uzupełnij zdanie:</label>
-                <p class="task-sentence my-2 text-gray-300 text-lg">Das Meer kann bei einem Sturm stark ______.</p>
-                <div class="flex flex-col sm:flex-row gap-2">
-                    <input id="task10" type="text" class="flex-grow bg-gray-700 border-2 border-gray-600 rounded-lg py-2 px-4 text-white focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500 transition" placeholder="Wpisz słówko...">
-                    <button class="check-btn bg-indigo-600 hover:bg-indigo-700 text-white font-bold py-2 px-4 rounded-lg transition duration-300 ease-in-out">Sprawdź</button>
-                </div>
-                <p class="feedback mt-2 h-6 text-sm font-semibold"></p>
-            </div>
-
+            <div class="word-card bg-gray-800 rounded-2xl shadow-2xl p-6 transition duration-300 hover:shadow-indigo-500/40"><h3 class="text-2xl font-bold text-indigo-400 mb-4">Zadanie 3</h3><label for="task3" class="block mb-2 font-semibold text-gray-300">Uzupełnij zdanie:</label><p class="task-sentence my-2 text-gray-300 text-lg">Die Prüfung in Mathe war sehr ______.</p><div class="flex flex-col sm:flex-row gap-2"><input id="task3" type="text" class="flex-grow bg-gray-700 border-2 border-gray-600 rounded-lg py-2 px-4 text-white focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500 transition" placeholder="Wpisz słówko..."><button class="check-btn bg-indigo-600 hover:bg-indigo-700 text-white font-bold py-2 px-4 rounded-lg transition duration-300 ease-in-out">Sprawdź</button></div><p class="feedback mt-2 h-6 text-sm font-semibold"></p></div>
+            <div class="word-card bg-gray-800 rounded-2xl shadow-2xl p-6 transition duration-300 hover:shadow-indigo-500/40"><h3 class="text-2xl font-bold text-indigo-400 mb-4">Zadanie 4</h3><label for="task4" class="block mb-2 font-semibold text-gray-300">Uzupełnij zdanie:</label><p class="task-sentence my-2 text-gray-300 text-lg">Ich hoffe, wir werden uns schnell ______ sein.</p><div class="flex flex-col sm:flex-row gap-2"><input id="task4" type="text" class="flex-grow bg-gray-700 border-2 border-gray-600 rounded-lg py-2 px-4 text-white focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500 transition" placeholder="Wpisz słówko..."><button class="check-btn bg-indigo-600 hover:bg-indigo-700 text-white font-bold py-2 px-4 rounded-lg transition duration-300 ease-in-out">Sprawdź</button></div><p class="feedback mt-2 h-6 text-sm font-semibold"></p></div>
+            <div class="word-card bg-gray-800 rounded-2xl shadow-2xl p-6 transition duration-300 hover:shadow-indigo-500/40"><h3 class="text-2xl font-bold text-indigo-400 mb-4">Zadanie 5</h3><label for="task5" class="block mb-2 font-semibold text-gray-300">Uzupełnij zdanie:</label><p class="task-sentence my-2 text-gray-300 text-lg">Was kannst du mir _______?</p><div class="flex flex-col sm:flex-row gap-2"><input id="task5" type="text" class="flex-grow bg-gray-700 border-2 border-gray-600 rounded-lg py-2 px-4 text-white focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500 transition" placeholder="Wpisz słówko..."><button class="check-btn bg-indigo-600 hover:bg-indigo-700 text-white font-bold py-2 px-4 rounded-lg transition duration-300 ease-in-out">Sprawdź</button></div><p class="feedback mt-2 h-6 text-sm font-semibold"></p></div>
+            <div class="word-card bg-gray-800 rounded-2xl shadow-2xl p-6 transition duration-300 hover:shadow-indigo-500/40"><h3 class="text-2xl font-bold text-indigo-400 mb-4">Zadanie 6</h3><label for="task6" class="block mb-2 font-semibold text-gray-300">Uzupełnij zdanie:</label><p class="task-sentence my-2 text-gray-300 text-lg">Das war ein besonderer _______ in meinem Leben.</p><div class="flex flex-col sm:flex-row gap-2"><input id="task6" type="text" class="flex-grow bg-gray-700 border-2 border-gray-600 rounded-lg py-2 px-4 text-white focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500 transition" placeholder="Wpisz słówko..."><button class="check-btn bg-indigo-600 hover:bg-indigo-700 text-white font-bold py-2 px-4 rounded-lg transition duration-300 ease-in-out">Sprawdź</button></div><p class="feedback mt-2 h-6 text-sm font-semibold"></p></div>
+            <div class="word-card bg-gray-800 rounded-2xl shadow-2xl p-6 transition duration-300 hover:shadow-indigo-500/40"><h3 class="text-2xl font-bold text-indigo-400 mb-4">Zadanie 7</h3><label for="task7" class="block mb-2 font-semibold text-gray-300">Uzupełnij zdanie:</label><p class="task-sentence my-2 text-gray-300 text-lg">Mach einen _______ nach vorne.</p><div class="flex flex-col sm:flex-row gap-2"><input id="task7" type="text" class="flex-grow bg-gray-700 border-2 border-gray-600 rounded-lg py-2 px-4 text-white focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500 transition" placeholder="Wpisz słówko..."><button class="check-btn bg-indigo-600 hover:bg-indigo-700 text-white font-bold py-2 px-4 rounded-lg transition duration-300 ease-in-out">Sprawdź</button></div><p class="feedback mt-2 h-6 text-sm font-semibold"></p></div>
+            <div class="word-card bg-gray-800 rounded-2xl shadow-2xl p-6 transition duration-300 hover:shadow-indigo-500/40"><h3 class="text-2xl font-bold text-indigo-400 mb-4">Zadanie 8</h3><label for="task8" class="block mb-2 font-semibold text-gray-300">Uzupełnij zdanie:</label><p class="task-sentence my-2 text-gray-300 text-lg">Auch wenn es schwer ist, darfst du nicht ______.</p><div class="flex flex-col sm:flex-row gap-2"><input id="task8" type="text" class="flex-grow bg-gray-700 border-2 border-gray-600 rounded-lg py-2 px-4 text-white focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500 transition" placeholder="Wpisz słówko..."><button class="check-btn bg-indigo-600 hover:bg-indigo-700 text-white font-bold py-2 px-4 rounded-lg transition duration-300 ease-in-out">Sprawdź</button></div><p class="feedback mt-2 h-6 text-sm font-semibold"></p></div>
+            <div class="word-card bg-gray-800 rounded-2xl shadow-2xl p-6 transition duration-300 hover:shadow-indigo-500/40"><h3 class="text-2xl font-bold text-indigo-400 mb-4">Zadanie 9</h3><label for="task9" class="block mb-2 font-semibold text-gray-300">Uzupełnij zdanie:</label><p class="task-sentence my-2 text-gray-300 text-lg">Meine Oma wird dich ______.</p><div class="flex flex-col sm:flex-row gap-2"><input id="task9" type="text" class="flex-grow bg-gray-700 border-2 border-gray-600 rounded-lg py-2 px-4 text-white focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500 transition" placeholder="Wpisz słówko..."><button class="check-btn bg-indigo-600 hover:bg-indigo-700 text-white font-bold py-2 px-4 rounded-lg transition duration-300 ease-in-out">Sprawdź</button></div><p class="feedback mt-2 h-6 text-sm font-semibold"></p></div>
+            <div class="word-card bg-gray-800 rounded-2xl shadow-2xl p-6 transition duration-300 hover:shadow-indigo-500/40"><h3 class="text-2xl font-bold text-indigo-400 mb-4">Zadanie 10</h3><label for="task10" class="block mb-2 font-semibold text-gray-300">Uzupełnij zdanie:</label><p class="task-sentence my-2 text-gray-300 text-lg">Das Meer kann bei einem Sturm stark ______.</p><div class="flex flex-col sm:flex-row gap-2"><input id="task10" type="text" class="flex-grow bg-gray-700 border-2 border-gray-600 rounded-lg py-2 px-4 text-white focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500 transition" placeholder="Wpisz słówko..."><button class="check-btn bg-indigo-600 hover:bg-indigo-700 text-white font-bold py-2 px-4 rounded-lg transition duration-300 ease-in-out">Sprawdź</button></div><p class="feedback mt-2 h-6 text-sm font-semibold"></p></div>
         </div>
     </main>
     
     <footer class="bg-gray-800 mt-12">
         <div class="container mx-auto px-6 py-4 text-center text-gray-500">
-            <p>Projekt na język niemiecki | Stworzone na podstawie tekstu piosenki.</p>
+            <p>Piotr Jarosz, Szymon Pawlica, Krzysztof Oraczewski</p>
         </div>
     </footer>
 
     <script>
         document.addEventListener('DOMContentLoaded', () => {
-
-            // --- NOWA LOGIKA: Obracanie kart w banku słów ---
             const flipCards = document.querySelectorAll('.flip-card');
-
             flipCards.forEach(card => {
                 card.addEventListener('click', () => {
                     card.querySelector('.flip-card-inner').classList.toggle('is-flipped');
                 });
             });
 
-            // --- Logika dla przycisku tłumaczenia ---
             const translateBtn = document.getElementById('translate-btn');
             const descriptionText = document.getElementById('song-description-text');
-            
             const germanText = "Dieses Lied ist über den Lebensweg. Es sagt, dass das Leben nicht leicht ist. Es ist oft schwer, mit vielen Steinen und Hindernissen.";
             const polishText = "Ta piosenka jest o drodze życia. Mówi o tym, że życie nie jest łatwe. Często jest ciężkie, z wieloma kamieniami i przeszkodami.";
-
             let isGerman = true;
-
             translateBtn.addEventListener('click', () => {
                 if (isGerman) {
                     descriptionText.textContent = polishText;
@@ -270,37 +251,22 @@
                 isGerman = !isGerman;
             });
 
-
-            // --- Logika dla sprawdzania zadań ---
             const correctAnswers = {
-                task1: 'führen',
-                task2: 'steinig',
-                task3: 'schwer',
-                task4: 'einig',
-                task5: 'bieten',
-                task6: 'Augenblick',
-                task7: 'Schritt',
-                task8: 'aufgeben',
-                task9: 'segnen',
-                task10: 'aufbrausen'
+                task1: 'führen', task2: 'steinig', task3: 'schwer', task4: 'einig', task5: 'bieten',
+                task6: 'Augenblick', task7: 'Schritt', task8: 'aufgeben', task9: 'segnen', task10: 'aufbrausen'
             };
-
             const checkButtons = document.querySelectorAll('.check-btn');
-
             checkButtons.forEach(button => {
                 button.addEventListener('click', () => {
                     const card = button.closest('.word-card');
                     const inputField = card.querySelector('input[type="text"]');
                     const feedbackElement = card.querySelector('.feedback');
                     const inputId = inputField.id;
-
                     const correctAnswer = correctAnswers[inputId].toLowerCase();
                     const userAnswer = inputField.value.trim().toLowerCase();
-
                     feedbackElement.classList.remove('text-green-400', 'text-red-400', 'feedback-animation');
                     inputField.classList.remove('border-green-500', 'border-red-500');
                     void feedbackElement.offsetWidth;
-
                     if (userAnswer === correctAnswer) {
                         feedbackElement.textContent = 'Doskonale! ✅';
                         feedbackElement.classList.add('text-green-400');
